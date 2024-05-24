@@ -17,17 +17,485 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    background-color: white;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
+
+/* Base styles */
+.primaryText {
+  font-size: 2rem; /* Adjust primary text size */
+}
+
+.secondaryText {
+  font-size: 1.2rem; /* Adjust secondary text size */
+}
+
+
+.feature-card {
+  transition: transform 0.8s ease;
+
+}
+
+.feature-card:hover {
+  transform: scale(1.1);
+}
+
+
+/* Media queries for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjustments for mobile devices */
+  .primaryText {
+    font-size: 1.5rem; /* Decrease primary text size for mobile */
+  }
+  .secondaryText {
+    font-size: 1rem; /* Decrease secondary text size for mobile */
+  }
+}
+
+/* .slick-slide > div{
+  margin: 0 10px;
+} */
+   
+
+
+
+    /* //HOME */
+
+    /* .home {
+      .posts {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        .post {
+          display: flex;
+          gap: 100px;
+
+          &:nth-child(2n + 1) {
+            flex-direction: row-reverse;
+          }
+
+          .img {
+            flex: 2;
+            position: relative;
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              background-color: #c69840;
+              position: absolute;
+              top: 20px;
+              left: -20px;
+              z-index: -1;
+            }
+
+            img {
+              width: 100%;
+              max-height: 400px;
+              object-fit: cover;
+            }
+          }
+
+          .content {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h1 {
+              font-size: 48px;
+            }
+
+            p {
+              font-size: 18px;
+            }
+
+            button {
+              width: max-content;
+              padding: 10px 20px;
+              border: none;
+              cursor: pointer;
+              background-color: white;
+              border: 1px solid teal;
+              color: teal;
+
+              &:hover {
+                border: 1px solid white;
+                background-color: #c69840;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    } */
+
+    .home {
+      .posts {
+        /* margin-top: 50px; */
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+        margin: 50px;
+    
+        .post {
+          display: flex;
+          gap: 100px;
+    
+          .img {
+            flex: 2;
+            position: relative;
+    
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              background-color: #c6974098;
+              position: absolute;
+              top: 20px;
+              left: -20px;
+              z-index: -1;
+            }
+    
+            img {
+              width: 100%;
+              max-height: 400px;
+              object-fit: cover;
+            }
+          }
+    
+          .content {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            h1 {
+              font-size: 48px;
+            }
+    
+            p {
+              font-size: 16px;
+            }
+    
+            button {
+              width: max-content;
+              padding: 10px 20px;
+              border: none;
+              cursor: pointer;
+              background-color: white;
+              border: 1px solid #c69840;
+              color: #c69840;
+    
+              &:hover {
+                border: 1px solid white;
+                background-color: #c69840;
+                color: black;
+              }
+            }
+          }
+        }
+    
+        /* // Media query for tablets and larger screens */
+        @media (min-width: 768px) {
+          .post:nth-child(2n + 1) {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+    
+
+    /* //SINGLE */
+
+    .single {
+      display: flex;
+      gap: 50px;
+      margin: 50px;
+      
+
+      .content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        img {
+          width: 100%;
+          height: 330px;
+          object-fit: cover;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 14px;
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* object-fit: cover; */
+          }
+
+          span {
+            font-weight: bold;
+          }
+        }
+
+        .edit {
+          display: flex;
+          gap: 5px;
+
+          img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          }
+        }
+
+        h1 {
+          font-size: 42px;
+          color: #333;
+        }
+        h3{
+          font-size: 22px;
+          color: #333;
+          font-weight: bold;
+        }
+
+        p {
+          text-align: justify;
+          line-height: 30px;
+        }
+      }
+      .menu {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        h1 {
+          font-size: 20px;
+          color: #555;
+        }
+
+        .post {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+
+          h2 {
+            color: #555;
+          }
+
+          button {
+            width: max-content;
+            padding: 7.5px 15px;
+            border: none;
+            cursor: pointer;
+            color: #c69840;
+            background-color: white;
+            border: 1px solid #c69840;
+
+            &:hover {
+              border: 1px solid white;
+              background-color: #c69840;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .single {
+        flex-direction: column;
+        margin: 14px;
+  
+        .content {
+          gap: 16px;
+  
+          h1 {
+            font-size: 28px;
+          }
+  
+          p {
+            font-size: 14px;
+          }
+        }
+  
+        .menu {
+          display: flex;
+          /* flex-direction: row; */
+
+          .post{
+            
+            button{
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  
+
+
+    .caption-animation {
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    /* //WRITE */
+
+    .add {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+
+      .content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input {
+          padding: 10px;
+          border: 1px solid lightgray;
+        }
+
+        .editorContainer {
+          height: 300px;
+          overflow: scroll;
+          border: 1px solid lightgray;
+
+          .editor {
+            height: 100%;
+            border: none;
+          }
+        }
+      }
+
+      .menu {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .item {
+          border: 1px solid lightgray;
+          padding: 10px;
+          flex:1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-size: 12px;
+          color: #555;
+
+          h1{
+            font-size: 20px;
+          }
+
+          .file{
+            text-decoration: underline;
+            cursor: pointer;
+          }
+
+          .buttons{
+            display: flex;
+            justify-content: space-between;
+
+            :first-child{
+              cursor: pointer;
+              color: teal;
+              background-color: white;
+              border: 1px solid teal;
+              padding: 3px 5px;
+            }
+            :last-child{
+              cursor: pointer;
+              color: white;
+              background-color: teal;
+              border: 1px solid teal;
+              padding: 3px 5px;
+            }
+          }
+
+          .cat{
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            color: teal;
+          }
+        }
+      }
+    }
+  @keyframes slideFromBottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-from-bottom {
+    animation: slideFromBottom 0.8s ease forwards;
+}
+
+
+
+
+/* Add this CSS to your stylesheets */
+
+/* Adjust the gap between slides */
+.slide-wrapper {
+  margin-right: 10px; /* Adjust as per your requirement */
+  border: none;
+}
+
+/* Ensure all images have the same height and width */
+.slider-image {
+  width: 100%; /* Ensure images fill the container width */
+  height: 300px; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure images don't exceed container width */
+  padding: 20px;
+  border: none;
 }
